@@ -1,75 +1,75 @@
 {
-  "name": "@excalidraw/utils",
-  "version": "0.1.2",
-  "type": "module",
-  "types": "./dist/types/utils/src/index.d.ts",
-  "main": "./dist/prod/index.js",
-  "module": "./dist/prod/index.js",
-  "exports": {
-    ".": {
-      "types": "./dist/types/utils/src/index.d.ts",
-      "development": "./dist/dev/index.js",
-      "production": "./dist/prod/index.js",
-      "default": "./dist/prod/index.js"
-    },
-    "./*": {
-      "types": "./dist/types/utils/src/*.d.ts"
-    }
-  },
-  "files": [
-    "dist/*"
-  ],
-  "description": "Excalidraw utility functions",
-  "publishConfig": {
-    "access": "public"
-  },
-  "license": "MIT",
-  "keywords": [
-    "excalidraw",
-    "excalidraw-utils"
-  ],
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not ie <= 11",
-      "not op_mini all",
-      "not safari < 12",
-      "not kaios <= 2.5",
-      "not edge < 79",
-      "not chrome < 70",
-      "not and_uc < 13",
-      "not samsung < 10"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "dependencies": {
-    "@braintree/sanitize-url": "6.0.2",
-    "@excalidraw/laser-pointer": "1.3.1",
-    "browser-fs-access": "0.29.1",
-    "open-color": "1.9.1",
-    "pako": "2.0.3",
-    "perfect-freehand": "1.2.0",
-    "png-chunk-text": "1.0.0",
-    "png-chunks-encode": "1.0.0",
-    "png-chunks-extract": "1.0.0",
-    "roughjs": "4.6.4"
-  },
-  "devDependencies": {
-    "cross-env": "7.0.3",
-    "fonteditor-core": "2.4.0",
-    "typescript": "4.9.4",
-    "wawoff2": "2.0.1",
-    "which": "4.0.0"
-  },
-  "bugs": "https://github.com/excalidraw/excalidraw/issues",
-  "repository": "https://github.com/excalidraw/excalidraw",
-  "scripts": {
-    "gen:types": "rimraf types && tsc",
-    "build:esm": "rimraf dist && node ../../scripts/buildUtils.js && yarn gen:types"
-  }
+    "name":  "@excalidraw/utils",
+    "version":  "0.1.2",
+    "type":  "module",
+    "types":  "./dist/types/utils/src/index.d.ts",
+    "main":  "./dist/prod/index.js",
+    "module":  "./dist/prod/index.js",
+    "exports":  {
+                    ".":  {
+                              "types":  "./dist/types/utils/src/index.d.ts",
+                              "development":  "./dist/dev/index.js",
+                              "production":  "./dist/prod/index.js",
+                              "default":  "./dist/prod/index.js"
+                          },
+                    "./*":  {
+                                "types":  "./dist/types/utils/src/*.d.ts"
+                            }
+                },
+    "files":  [
+                  "dist/*"
+              ],
+    "description":  "Excalidraw utility functions",
+    "publishConfig":  {
+                          "access":  "public"
+                      },
+    "license":  "MIT",
+    "keywords":  [
+                     "excalidraw",
+                     "excalidraw-utils"
+                 ],
+    "browserslist":  {
+                         "production":  [
+                                            "\u003e0.2%",
+                                            "not dead",
+                                            "not ie \u003c= 11",
+                                            "not op_mini all",
+                                            "not safari \u003c 12",
+                                            "not kaios \u003c= 2.5",
+                                            "not edge \u003c 79",
+                                            "not chrome \u003c 70",
+                                            "not and_uc \u003c 13",
+                                            "not samsung \u003c 10"
+                                        ],
+                         "development":  [
+                                             "last 1 chrome version",
+                                             "last 1 firefox version",
+                                             "last 1 safari version"
+                                         ]
+                     },
+    "dependencies":  {
+                         "@braintree/sanitize-url":  "6.0.2",
+                         "@excalidraw/laser-pointer":  "1.3.1",
+                         "browser-fs-access":  "0.29.1",
+                         "open-color":  "1.9.1",
+                         "pako":  "2.0.3",
+                         "perfect-freehand":  "1.2.0",
+                         "png-chunk-text":  "1.0.0",
+                         "png-chunks-encode":  "1.0.0",
+                         "png-chunks-extract":  "1.0.0",
+                         "roughjs":  "4.6.4"
+                     },
+    "devDependencies":  {
+                            "cross-env":  "7.0.3",
+                            "fonteditor-core":  "2.4.0",
+                            "typescript":  "4.9.4",
+                            "wawoff2":  "2.0.1",
+                            "which":  "4.0.0"
+                        },
+    "bugs":  "https://github.com/excalidraw/excalidraw/issues",
+    "repository":  "https://github.com/excalidraw/excalidraw",
+    "scripts":  {
+                    "gen:types":  "rimraf types \u0026\u0026 tsc",
+                    "build:esm":  "node -e \"require(\u0027fs\u0027).rmSync(\u0027dist\u0027,{recursive:true,force:true})\" \u0026\u0026 node ../../scripts/buildUtils.js \u0026\u0026 pnpm run gen:types"
+                }
 }

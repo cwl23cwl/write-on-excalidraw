@@ -1,63 +1,63 @@
 {
-  "name": "@excalidraw/element",
-  "version": "0.18.0",
-  "type": "module",
-  "types": "./dist/types/element/src/index.d.ts",
-  "main": "./dist/prod/index.js",
-  "module": "./dist/prod/index.js",
-  "exports": {
-    ".": {
-      "types": "./dist/types/element/src/index.d.ts",
-      "development": "./dist/dev/index.js",
-      "production": "./dist/prod/index.js",
-      "default": "./dist/prod/index.js"
-    },
-    "./*": {
-      "types": "./dist/types/element/src/*.d.ts",
-      "development": "./dist/dev/index.js",
-      "production": "./dist/prod/index.js",
-      "default": "./dist/prod/index.js"
-    }
-  },
-  "files": [
-    "dist/*"
-  ],
-  "description": "Excalidraw elements-related logic",
-  "publishConfig": {
-    "access": "public"
-  },
-  "license": "MIT",
-  "keywords": [
-    "excalidraw",
-    "excalidraw-utils"
-  ],
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not ie <= 11",
-      "not op_mini all",
-      "not safari < 12",
-      "not kaios <= 2.5",
-      "not edge < 79",
-      "not chrome < 70",
-      "not and_uc < 13",
-      "not samsung < 10"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "bugs": "https://github.com/excalidraw/excalidraw/issues",
-  "repository": "https://github.com/excalidraw/excalidraw",
-  "scripts": {
-    "gen:types": "rimraf types && tsc",
-    "build:esm": "rimraf dist && node ../../scripts/buildBase.js && yarn gen:types"
-  },
-  "dependencies": {
-    "@excalidraw/common": "0.18.0",
-    "@excalidraw/math": "0.18.0"
-  }
+    "name":  "@excalidraw/element",
+    "version":  "0.18.0",
+    "type":  "module",
+    "types":  "./dist/types/element/src/index.d.ts",
+    "main":  "./dist/prod/index.js",
+    "module":  "./dist/prod/index.js",
+    "exports":  {
+                    ".":  {
+                              "types":  "./dist/types/element/src/index.d.ts",
+                              "development":  "./dist/dev/index.js",
+                              "production":  "./dist/prod/index.js",
+                              "default":  "./dist/prod/index.js"
+                          },
+                    "./*":  {
+                                "types":  "./dist/types/element/src/*.d.ts",
+                                "development":  "./dist/dev/index.js",
+                                "production":  "./dist/prod/index.js",
+                                "default":  "./dist/prod/index.js"
+                            }
+                },
+    "files":  [
+                  "dist/*"
+              ],
+    "description":  "Excalidraw elements-related logic",
+    "publishConfig":  {
+                          "access":  "public"
+                      },
+    "license":  "MIT",
+    "keywords":  [
+                     "excalidraw",
+                     "excalidraw-utils"
+                 ],
+    "browserslist":  {
+                         "production":  [
+                                            "\u003e0.2%",
+                                            "not dead",
+                                            "not ie \u003c= 11",
+                                            "not op_mini all",
+                                            "not safari \u003c 12",
+                                            "not kaios \u003c= 2.5",
+                                            "not edge \u003c 79",
+                                            "not chrome \u003c 70",
+                                            "not and_uc \u003c 13",
+                                            "not samsung \u003c 10"
+                                        ],
+                         "development":  [
+                                             "last 1 chrome version",
+                                             "last 1 firefox version",
+                                             "last 1 safari version"
+                                         ]
+                     },
+    "bugs":  "https://github.com/excalidraw/excalidraw/issues",
+    "repository":  "https://github.com/excalidraw/excalidraw",
+    "scripts":  {
+                    "gen:types":  "rimraf types \u0026\u0026 tsc",
+                    "build:esm":  "node -e \"require(\u0027fs\u0027).rmSync(\u0027dist\u0027,{recursive:true,force:true})\" \u0026\u0026 node ../../scripts/buildBase.js \u0026\u0026 pnpm run gen:types"
+                },
+    "dependencies":  {
+                         "@excalidraw/common":  "workspace:*",
+                         "@excalidraw/math":  "workspace:*"
+                     }
 }
